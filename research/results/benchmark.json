@@ -1,0 +1,122 @@
+{
+  "latency": {
+    "devices": {
+      "cpu": {
+        "hardware": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+        "logical_cores": 4,
+        "torch_threads": 2,
+        "torch_version": "2.13.0+cpu",
+        "results": {
+          "480p": {
+            "width": 854,
+            "height": 480,
+            "mean_ms": 2857.2253299877048,
+            "std_ms": 93.45110680073675,
+            "fps": 0.34998989736812364,
+            "fps_std": 0.011447099721136857
+          },
+          "720p": {
+            "width": 1280,
+            "height": 720,
+            "mean_ms": 6597.340054973029,
+            "std_ms": 340.32922413192364,
+            "fps": 0.15157624007060347,
+            "fps_std": 0.00781918527015712
+          },
+          "1080p": {
+            "width": 1920,
+            "height": 1080,
+            "mean_ms": 20565.31995498808,
+            "std_ms": 3979.785231249647,
+            "fps": 0.04862555030452866,
+            "fps_std": 0.009409979878110878
+          }
+        }
+      }
+    },
+    "settings": {
+      "warmup_runs": 3,
+      "timed_runs": 20,
+      "batch_size": 1,
+      "precision": "float32"
+    }
+  },
+  "alerts": {
+    "settings": {
+      "checkpoint": "experiments/checkpoints/part_A/best_model.pth",
+      "checkpoint_epoch": 3,
+      "frame_step": 10,
+      "max_side": 640,
+      "consecutive_frames": 3,
+      "clear_ratio": 0.7,
+      "thresholds": "relative",
+      "threshold_note": "each zone's threshold is the mean of its own count over the video, so the count crosses it",
+      "without_hysteresis": "one event each time the per-frame status changes to WARNING or CRITICAL"
+    },
+    "videos": {
+      "festival_rath_yatra.webm": {
+        "frames_processed": 45,
+        "total_count": {
+          "min": 112.81893143593334,
+          "mean": 137.01477953334754,
+          "max": 157.65876687970012
+        },
+        "zone_thresholds": {
+          "entrance": 63.96385095824436,
+          "platform": 21.31201806741301,
+          "exit": 51.738910507690164
+        },
+        "with_hysteresis": {
+          "WARNING": 3,
+          "CRITICAL": 3
+        },
+        "without_hysteresis": {
+          "WARNING": 14,
+          "CRITICAL": 12
+        }
+      },
+      "market_mallick_ghat.webm": {
+        "frames_processed": 43,
+        "total_count": {
+          "min": 66.21502991463058,
+          "mean": 225.9852489391071,
+          "max": 373.9788466626778
+        },
+        "zone_thresholds": {
+          "entrance": 121.71589660777732,
+          "platform": 48.019413161570704,
+          "exit": 56.24993916975908
+        },
+        "with_hysteresis": {
+          "WARNING": 3,
+          "CRITICAL": 3
+        },
+        "without_hysteresis": {
+          "WARNING": 3,
+          "CRITICAL": 3
+        }
+      },
+      "station_mumbai_cstm.webm": {
+        "frames_processed": 29,
+        "total_count": {
+          "min": 29.366185716819018,
+          "mean": 40.67284768834662,
+          "max": 53.82468430418521
+        },
+        "zone_thresholds": {
+          "entrance": 18.5715169511045,
+          "platform": 8.711516995962452,
+          "exit": 13.389813741279669
+        },
+        "with_hysteresis": {
+          "WARNING": 3,
+          "CRITICAL": 5
+        },
+        "without_hysteresis": {
+          "WARNING": 13,
+          "CRITICAL": 11
+        }
+      }
+    }
+  }
+}

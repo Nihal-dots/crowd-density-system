@@ -1,0 +1,35 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Datasets (keep the folder, ignore its contents)
+data/raw/*
+!data/raw/.gitkeep
+
+# Generated density maps (rebuild with training/density_map.py)
+data/processed/*
+!data/processed/.gitkeep
+
+# Model weights
+*.pth
+
+# Alerts database
+alerts.db
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dataset archives (too large for GitHub)
+*.zip
+
+# Evaluation cache (rebuild with research/evaluate_all.py)
+research/results/eval_cache/

@@ -1,0 +1,103 @@
+{
+  "dataset_root": "data/raw/ShanghaiTech",
+  "splits": {
+    "part_A/train_data": {
+      "validation": {
+        "num_images": 300,
+        "num_ground_truth": 300,
+        "expected_images": 300,
+        "missing_ground_truth": [],
+        "missing_images": [],
+        "unexpected_files": [],
+        "ok": true
+      },
+      "num_images": 300,
+      "min_count": 33,
+      "mean_count": 541.38,
+      "max_count": 3138,
+      "total_heads": 162413,
+      "min_width": 299,
+      "max_width": 1024,
+      "min_height": 182,
+      "max_height": 1024,
+      "points_outside_image": 0
+    },
+    "part_A/test_data": {
+      "validation": {
+        "num_images": 182,
+        "num_ground_truth": 182,
+        "expected_images": 182,
+        "missing_ground_truth": [],
+        "missing_images": [],
+        "unexpected_files": [],
+        "ok": true
+      },
+      "num_images": 182,
+      "min_count": 66,
+      "mean_count": 433.31,
+      "max_count": 2256,
+      "total_heads": 78862,
+      "min_width": 293,
+      "max_width": 1024,
+      "min_height": 200,
+      "max_height": 1024,
+      "points_outside_image": 0
+    },
+    "part_B/train_data": {
+      "validation": {
+        "num_images": 400,
+        "num_ground_truth": 400,
+        "expected_images": 400,
+        "missing_ground_truth": [],
+        "missing_images": [],
+        "unexpected_files": [],
+        "ok": true
+      },
+      "num_images": 400,
+      "min_count": 12,
+      "mean_count": 122.88,
+      "max_count": 576,
+      "total_heads": 49151,
+      "min_width": 1024,
+      "max_width": 1024,
+      "min_height": 768,
+      "max_height": 768,
+      "points_outside_image": 0
+    },
+    "part_B/test_data": {
+      "validation": {
+        "num_images": 316,
+        "num_ground_truth": 316,
+        "expected_images": 316,
+        "missing_ground_truth": [],
+        "missing_images": [],
+        "unexpected_files": [],
+        "ok": true
+      },
+      "num_images": 316,
+      "min_count": 9,
+      "mean_count": 123.8,
+      "max_count": 539,
+      "total_heads": 39121,
+      "min_width": 1024,
+      "max_width": 1024,
+      "min_height": 768,
+      "max_height": 768,
+      "points_outside_image": 0
+    }
+  },
+  "parts": {
+    "part_A": {
+      "num_images": 482,
+      "total_heads": 241275,
+      "expected_total_heads": 241677,
+      "difference": -402
+    },
+    "part_B": {
+      "num_images": 716,
+      "total_heads": 88272,
+      "expected_total_heads": 88488,
+      "difference": -216
+    }
+  }
+}
